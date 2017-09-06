@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "main": "app.js",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "serve": "tsc && node ./dist/app.js"
+  },
   "dependencies": {
     "botbuilder": "^3.9.1",
     "restify": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.26",
+    "@types/restify": "^5.0.2",
+    "typescript": "^2.5.2"
   }
 }
