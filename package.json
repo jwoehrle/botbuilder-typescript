@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node --inspect ./src/app.ts",
+    "start:idea-debug": "ts-node %NODE_DEBUG_OPTION% --ignore false ./src/app.ts"
   },
   "dependencies": {
     "botbuilder": "^3.9.1",
