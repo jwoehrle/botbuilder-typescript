@@ -18,10 +18,10 @@ server.post('/api/messages', connector.listen());
 // Receive messages from the user and respond by echoing each message back (prefixed with 'You said:')
 var bot = new builder.UniversalBot(connector, function (session) {
     let message = session.message.text ? session.message.text : '';
-    if ( message.toLocaleLowerCase().indexOf('uhr') > -1) {
-        session.send("Es ist jetzt: %s", new Date());
+    if ( message.toLocaleLowerCase().indexOf('time') > -1) {
+        let now = new Date();
+        session.send("The time is now exactly: %s", now.getHours() + ":" + now.getMinutes());
     } else {
         session.send("You said: %s", session.message.text);
     }
-
 });
