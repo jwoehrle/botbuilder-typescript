@@ -1,12 +1,12 @@
 {
-  "name": "firstBot",
-  "version": "1.0.0",
+  "name": "botbuilder-typescript",
+  "version": "0.0.1",
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node --inspect ./src/app.ts",
-    "start:idea-debug": "ts-node %NODE_DEBUG_OPTION% --ignore false ./src/app.ts"
+    "start": "npm run start:live-debug",
+    "start:live-debug": "nodemon --exec ./node_modules/.bin/ts-node --inspect ./src/app.ts",
+    "start:idea-debug": "nodemon -e ts -w ./src -x ./node_modules/.bin/ts-node %NODE_DEBUG_OPTION% --ignore false ./src/app.ts"
   },
   "dependencies": {
     "botbuilder": "^3.9.1",
